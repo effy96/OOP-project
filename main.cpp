@@ -7,8 +7,8 @@ int main()
 {
 	/*
 
-	Îòíîñíî ôóíêöèÿòà create ñå ïîäàâàò ñòîéíîñòè : cx=".." cy="..." r=".."
-	ïðèìåð: > create circle cx="43" cy="4" r="455" fill="green" stroke="red" stroke-width="2"
+	ÐžÑ‚Ð½Ð¾ÑÐ½Ð¾ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑÑ‚Ð° create ÑÐµ Ð¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ ÑÑ‚Ð¾Ð¹Ð½Ð¾ÑÑ‚Ð¸ : cx=".." cy="..." r=".."
+	Ð¿Ñ€Ð¸Ð¼ÐµÑ€: > create circle cx="43" cy="4" r="455" fill="green" stroke="red" stroke-width="2"
 
 	*/
 	char command[200];
