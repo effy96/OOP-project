@@ -2,17 +2,7 @@ using namespace std;
 #ifndef _Shape_
 #define _Shape_
 #include<cstring>;
-#include<iostream>
-/*
-enum type_Shape
-{
-	Circle_,
-	Ellipse_,
-	Rect_,
-	Line_,
-	None_
-};*/
-
+#include<iostream> 
 class Shape
 {
 public:
@@ -29,15 +19,13 @@ public:
 	virtual double get_width();
 	virtual void set_number(unsigned);;
 	virtual unsigned get_number();
-	
-	//virtual	void set_type(unsigned);
+	 
 public:
 	virtual void get_data(char*) = 0;
 	virtual void save(fstream&) = 0;
 	virtual void print() = 0;
 	virtual void translate(double,double)=0;
-private:
-	//type_Shape	type;
+private: 
 	char* fill;
 	char * stroke;
 	double stroke_width;
@@ -49,8 +37,7 @@ Shape::Shape()
 	fill = nullptr;
 	stroke = nullptr;
 	stroke_width = 0;
-	shapes_number = 0;
-	//type = None_;
+	shapes_number = 0; 
 }
 
 inline Shape::Shape(const Shape &a)
@@ -65,21 +52,19 @@ inline Shape & Shape::operator=(const Shape &a)
 		set_fill(a.fill);
 		set_stroke(a.stroke);
 		stroke = a.stroke;
-		shapes_number = a.shapes_number;
-		//type = a.type;
+		shapes_number = a.shapes_number; 
 	}
 	return *this;
 }
 Shape::~Shape()
 {
 	fill = nullptr;
-	stroke = nullptr; // zashto ne rabvoti delete
+	stroke = nullptr;  
 	stroke_width = 0;
-	shapes_number = 0;
-	//type = None_;
+	shapes_number = 0; 
 }
 
-inline void Shape::print()// print shape
+inline void Shape::print() 
 {
 	cout << fill << " " << stroke << " " << stroke_width << endl;
 }
@@ -136,29 +121,6 @@ inline void Shape::set_number(unsigned a)
 inline unsigned Shape::get_number()
 {
 	return shapes_number;
-}
-/*
-inline void Shape::set_type(unsigned number)
-{
-	switch (number)
-	{
-	case 0:
-		type = Circle_;
-		break;
-	case 1:
-		type = Ellipse_;
-		break;
-	case 2:
-		type = Rect_;
-		break;
-	case 3:
-		type = Line_;
-		break;
-	default:
-		type = None_;
-		break;
-	}
-}*/
-
+} 
 
 #endif // !_Shape_
