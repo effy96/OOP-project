@@ -68,7 +68,7 @@ Shape** open_file(char name_of_file[193])
 	}
 	else
 	{
-		streampos beg, end;				//размер на файлът
+		streampos beg, end;				 
 		beg = f.tellg();
 		unsigned size_of_file = 0;
 		f.seekg(0, ios::end);
@@ -79,8 +79,8 @@ Shape** open_file(char name_of_file[193])
 		unsigned size = 0;
 		do
 		{
-			char* info = new(nothrow) char[size_of_file + 1]; //proverka za zadelena pamet
-			f.getline(info, size_of_file, '\n'); //взимаме всеки ред
+			char* info = new(nothrow) char[size_of_file + 1];  
+			f.getline(info, size_of_file, '\n'); 
 			unsigned len = strlen(info);
 			char* row = new (nothrow) char[len + 1];
 			strncpy(row, info, (len + 1));
